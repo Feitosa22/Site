@@ -86,12 +86,6 @@ button {
     box-shadow: var(--custom-shadow)
 }
 
-input,
-textarea {
-    background-color: var(--background-input);
-    color: var(--color-1);
-}
-
 button:hover {
     cursor: pointer;
     box-shadow: 0px 0px 10px 5px var(--background);

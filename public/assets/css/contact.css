@@ -22,23 +22,25 @@
     white-space: nowrap;
 }
 
-input {
+#form input {
     max-height: 40px;
 }
 
-input,
-textarea {
+#form input,
+#form textarea {
+    background-color: var(--background-input);
+    color: var(--color-1);
+    height: 10%;
     width: 100%;
     padding: 10px;
-    aspect-ratio: 10/1;
+    border-style: blue;
     font-size: 1.3rem;
-    border: .1px solid transparent;
     border-radius: 5px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 textarea {
-    height: 200px;
+    min-height: 25%;
     resize: none;
 }
 
@@ -51,7 +53,12 @@ textarea::-webkit-scrollbar {
     display: none;
 }
 
+.formData {
+    border-color: transparent;
+}
+
 #btnSend {
+    height: 10vh;
     position: relative;
     display: grid;
     place-items: center;
@@ -60,22 +67,20 @@ textarea::-webkit-scrollbar {
 }
 
 .erroForm {
-    border: 3px double var(--color-erro);
+    border: 1px solid red;
 }
 
 
-/* For Crome FireFox Opera Safari */
 ::placeholder {
     color: var(--color-1);
 }
 
-/* Edge */
 ::-ms-input-placeholder {
     color: var(--color-1);
 }
 
 @media (max-width: 868px) {
     #form {
-        width: 80%;
+        width: 60%;
     }
 }
