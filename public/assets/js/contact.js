@@ -73,13 +73,16 @@ function validarFormulario() {
 async function enviarFormulario(params) {
   form.style.pointerEvents = "none";
   try {
-    const response = await fetch("http://localhost:8080/enviar-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(params),
-    });
+    const response = await fetch(
+      "https://site-x3vd.onrender.com/enviar-email",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(params),
+      }
+    );
 
     const data = await response.json();
     if (response.ok) {
