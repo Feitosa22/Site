@@ -4,7 +4,9 @@ const nav = document.querySelector(".nav-auto");
 
 async function fetchGitHub() {
   try {
-    const response = await fetch("http://localhost:5001/api/github");
+    const response = await fetch(
+      "https://api.github.com/users/feitosa22/repos"
+    );
     if (!response.ok) {
       throw new Error(`Erro: ${response.status} ${response.statusText}`);
     }
@@ -12,18 +14,25 @@ async function fetchGitHub() {
     const data = await response.json();
     let duplicarPrimeiroCard = data[0];
     data.push(duplicarPrimeiroCard);
+
     let htmlCard = "";
     let htmlBtn = "";
 
     data.forEach((item, index) => {
-      htmlCard += `
-        <div class="card" ">
-          <img src="${item.urlIMG}" alt="Imagem de ${item.name}" />
-          <span>${item.name}</span>
-          <a href="${item.homepage}">Clique Aqui Para Ver Demo</a>
-        </div>`;
-      if (data.length !== index + 1) {
-        htmlBtn += `<div class="auto-btn btn${index}" data-info="${index}"></div>`;
+      if (item.name !== "Feitosa22") {
+        htmlCard += `
+          <div class="card" ">
+            <img src="${item.description}" alt="Imagem de ${item.name.replace(
+          "-",
+          " "
+        )}" />
+            <span>${item.name}</span>
+            <a href="${item.homepage}">Clique Aqui Para Ver Demo</a>
+          </div>`;
+        if (data.length !== index + 1) {
+          htmlBtn += `<div class="auto-btn btn${slidesLength}" data-info="${slidesLength}"></div>`;
+        }
+        slidesLength++;
       }
     });
 
@@ -35,7 +44,7 @@ async function fetchGitHub() {
     console.error("Erro ao buscar os dados:", error.message);
   }
 }
-primeiroAcesso();
+fetchGitHub();
 function primeiroAcesso() {
   const htmlCard = localStorage.getItem("cardProjects");
   const htmlBtn = localStorage.getItem("navProjects");
@@ -44,7 +53,6 @@ function primeiroAcesso() {
     card.innerHTML = htmlCard;
     return;
   }
-  fetchGitHub();
 }
 
 let count = 0;
