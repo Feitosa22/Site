@@ -1,5 +1,6 @@
 1-arrumar envio de email não está funcionando pois o back está off
 2-arrumar dominio do site
+1515-arrumar responsividade\*-- sobre 1012-add efeito no scroll
 1212-Atualizar Tema ![alt text](image.png)
 1213-Adicionar Mudança de Idioma
 1213.1 - não trduzir palavras chaves
@@ -7,8 +8,7 @@
 8090-Add Drag Drop nas Habilidades
 9009-Colocar captch e pedido de autorização pra utilização dos dados https://www.google.com/recaptcha/about/
 1010-Add Esqueleto
-1012-add scroll
-1515-arrumar responsividade  
+
 10555-arrumar saves no localstora, quando tiver atulização, atualizar lá tbm
 
 01/12/2024 - Criando Portifólio.

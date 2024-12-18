@@ -4,16 +4,37 @@ const nav = document.querySelector(".nav-auto");
 
 async function fetchGitHub() {
   try {
-    const response = await fetch(
-      "https://api.github.com/users/feitosa22/repos"
-    );
-    if (!response.ok) {
-      throw new Error(`Erro: ${response.status} ${response.statusText}`);
-    }
+    //limite excedito
+    // const response = await fetch(
+    //   "https://api.github.com/users/feitosa22/repos"
+    // );
+    // if (!response.ok) {
+    //   throw new Error(`Erro: ${response.status} ${response.statusText}`);
+    // }
 
-    const data = await response.json();
-    let duplicarPrimeiroCard = data[0];
-    data.push(duplicarPrimeiroCard);
+    // const data = await response.json();
+    let data = [
+      {
+        name: "Site",
+        description:
+          "https://raw.githubusercontent.com/Feitosa22/Site/refs/heads/main/screenshot.png",
+        homepage: "feitosatecnologia.netlify.app/",
+      },
+      {
+        name: "Vagas-Estacionamento",
+        description:
+          "https://raw.githubusercontent.com/Feitosa22/Vagas-Estacionamento/refs/heads/main/Estacionamento.png",
+        homepage: "vagaestacionamento.netlify.app/",
+      },
+      {
+        name: "Dashboard-Financeiro",
+        description:
+          "https://raw.githubusercontent.com/Feitosa22/Dashboard-Financeiro/refs/heads/main/dashboard.png",
+        homepage: "ControleFinanceiroDashboard.vercel.app",
+      },
+    ];
+
+    data.push(data[0]);
 
     let htmlCard = "";
     let htmlBtn = "";

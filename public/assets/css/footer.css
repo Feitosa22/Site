@@ -30,7 +30,8 @@ footer img {
 }
 
 footer a:hover {
-    border-radius: 50%;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: all .5s;
 }

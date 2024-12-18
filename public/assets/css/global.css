@@ -8,10 +8,14 @@
 }
 
 main {
-    height: 90vh;
-    width: 90vw;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: all 1s;
     padding: 3vh 2vw;
+    gap: 2%;
 }
 
 
@@ -206,11 +210,8 @@ h1 {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 868px) {
     main {
-        position: absolute;
-        max-height: 90svh;
-        max-width: 90svw;
         padding: 3vh 2vw;
     }
 

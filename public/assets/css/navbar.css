@@ -81,8 +81,8 @@ nav a:hover span::before {
     header {
         position: fixed;
         width: 100dvw;
-        height: 10vh;
-        min-height: 10vh;
+        height: 8vh;
+        min-height: 8vh;
         bottom: 0;
         z-index: 1;
         display: grid;
@@ -97,7 +97,7 @@ nav a:hover span::before {
     }
 
     header nav a img {
-        height: 5.5vh;
+        height: 5vh;
         display: flex;
     }
 

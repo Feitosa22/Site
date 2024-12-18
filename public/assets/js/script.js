@@ -23,7 +23,7 @@ const menuItemsNav = [
 
 const menuItemsFooter = [
   {
-    link: "https://wa.me/5511981222710",
+    link: "https://wa.me/5511981222710?text=Oi%2C%20gostaria%20de%20mais%20informações!",
     icon: "/public/assets/images/whatsapp2.svg",
     iconHover: "/public/assets/images/whatsapp2Green.svg",
     color: "#25D366",
