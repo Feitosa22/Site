@@ -106,19 +106,6 @@ main {
 }
 
 @media (max-width: 768px) {
-
-
-    /* main {
-        overflow-y: scroll;
-        scrollbar-color: var(--color-2) var(--color-2);
-        scrollbar-width: thin;
-        scroll-behavior: smooth;
-        scrollbar-track-color: black;
-        scrollbar-face-color: aqua;
-
-    } */
-
-
     main {
         flex-direction: column;
         height: auto;

@@ -8,9 +8,8 @@
 }
 
 main {
-    height: 100vh;
-    width: 100vw;
-    padding: 8vh 5vw;
+    height: 90vh;
+    width: 90vw;
     transition: all 1s;
 }
 
@@ -209,8 +208,9 @@ h1 {
 @media (max-width: 768px) {
     main {
         position: absolute;
-        height: 100dvh;
-        width: 100lvw;
+        max-height: 90svh;
+        max-width: 90svw;
+        padding: 3vh 2vw;
     }
 
     #tema {

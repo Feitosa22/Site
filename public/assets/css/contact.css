@@ -73,3 +73,9 @@ textarea::-webkit-scrollbar {
 ::-ms-input-placeholder {
     color: var(--color-1);
 }
+
+@media (max-width: 868px) {
+    #form {
+        width: 80%;
+    }
+}

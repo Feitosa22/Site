@@ -2,7 +2,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5%;
 }
 
 #home {
@@ -13,6 +12,7 @@ main {
     text-align: center;
     gap: 4%;
     justify-content: center;
+    padding: 5%;
 }
 
 #home h2 {
@@ -27,6 +27,7 @@ main {
     font-family: monospace;
     color: #1d4ed8;
     animation: typing 10s steps(32) forwards infinite, blink .5s step-end infinite alternate;
+    animation-delay: 2s;
 }
 
 #home p {
@@ -38,7 +39,6 @@ main {
     height: 100%;
     display: flex;
     justify-content: center;
-
 }
 
 .buttons button {
@@ -58,6 +58,7 @@ main {
     display: flex;
     justify-content: center;
     gap: 5%;
+    font-size: calc(0.75vw + 0.75vh);
 }
 
 .buttons .cv a img {
@@ -75,7 +76,7 @@ main {
 }
 
 .buttons img {
-    transform: scale(2);
+    height: 5vh;
 }
 
 #avatar {
@@ -84,17 +85,13 @@ main {
     pointer-events: none;
     margin: 0 auto;
     transform: rotateZ(-45deg);
-    border-radius: 20%;
+    border-radius: 10%;
     height: 40vh;
     aspect-ratio: 1;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 12px 24px rgba(0, 0, 0, 0.25);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     user-select: none;
     overflow: hidden;
-}
-
-#avatar:hover img {
-    transform: scale(1.2);
 }
 
 #avatar img {
@@ -110,18 +107,15 @@ main {
 @media (max-width: 868px) {
     main {
         flex-direction: column;
-        height: 80dvh;
-        max-height: 80lvh;
-        width: 100dvw;
+        gap: 10%;
     }
 
     #home {
         width: 100%;
-
     }
 
     #avatar {
-        margin-bottom: 5%;
+        height: 25vh;
         order: -1;
     }
 
@@ -136,6 +130,7 @@ main {
     }
 
     .buttons img {
+        transform: scale(1);
         display: flex;
     }
 }
