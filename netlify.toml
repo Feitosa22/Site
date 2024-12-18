@@ -1,0 +1,19 @@
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/sobre"
+  to = "/public/assets/docs/sobre.html"
+  status = 200
+
+[[redirects]]
+  from = "/contato"
+  to = "/public/assets/docs/contato.html"
+  status = 200
+
+[[redirects]]
+  from = "/projetos"
+  to = "/public/assets/docs/projetos.html"
+  status = 200

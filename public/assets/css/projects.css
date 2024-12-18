@@ -1,0 +1,130 @@
+main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/public/assets/images/cafe.svg') no-repeat center / contain;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+#projects {
+    background-color: var(--box-shadow-img);
+    border-radius: 8px;
+    height: 80vh;
+    width: 40%;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+#projects .projetosGithub {
+    position: relative;
+    display: flex;
+    width: 100%;
+    border-radius: 8px;
+    height: 50%;
+    flex-direction: column;
+    align-items: center;
+}
+
+#projects .projetosGithub .cards {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+#projects .projetosGithub .cards .card {
+    position: relative;
+    margin-block: 20px;
+    margin-left: 5%;
+    gap: 5%;
+    flex: 0 0 90%;
+    background-color: var(--color-2);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#projects .projetosGithub .cards .card a {
+    padding: 1vw;
+    border-radius: 8px;
+    color: var(--color-1);
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: var(--box-shadow-img);
+    transition: 0.1s;
+}
+
+#projects .projetosGithub .cards .card a:hover {
+    background-color: aqua;
+    color: black;
+}
+
+.nav-auto {
+    display: flex;
+    gap: 0.5vw;
+}
+
+.nav-auto div {
+    background-color: var(--color-2);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    padding: 0.5vw;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav-auto .active {
+    background-color: var(--color-1);
+}
+
+
+#projects .projetosGithub .card img {
+    width: 50%;
+    height: 50%;
+    border-radius: 8px;
+}
+
+.container {
+    position: absolute;
+    top: 100%;
+    left: 80%;
+    height: 6vh;
+    aspect-ratio: 1;
+    background: conic-gradient(blue .6deg, black 0deg);
+    padding: 0.6vh;
+    display: grid;
+    border-radius: 100%;
+    place-items: center;
+}
+
+.circulo {
+    position: relative;
+    background-color: rgba(255, 255, 255);
+    height: 100%;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    align-content: center;
+    text-align: center;
+}
+
+.valor {
+    position: relative;
+    font-size: 2.8vh;
+    color: black;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    #projects {
+        width: 80vw;
+    }
+}

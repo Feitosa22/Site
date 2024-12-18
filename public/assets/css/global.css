@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    user-select: none;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    padding: 8vh 5vw;
+    transition: all 1s;
+}
+
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+    body {
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
+}
+
+body {
+    color: var(--color-1);
+    background-color: var(--background);
+}
+
+:root {
+    --box-shadow-img: rgba(205, 205, 162, 0.25) 0px 50px 100px -20px,
+        rgba(255, 255, 255, 0.3) 0px 30px 60px -30px,
+        rgba(245, 218, 191, 0.35) 0px -2px 6px 0px inset;
+    --color-img: linear-gradient(to bottom, gray 50%, rgba(0, 0, 0, 0.08) 90%);
+    --backgroung-nav: linear-gradient(90deg, rgba(139, 139, 139, 1) 0%, rgba(193, 193, 193, 1) 50%, rgba(145, 145, 145, 1) 100%);
+    --background-footer: linear-gradient(90deg, rgba(139, 139, 139, 1) 0%, rgba(193, 193, 193, 1) 50%, rgba(145, 145, 145, 1) 100%);
+    --background: rgba(0, 0, 0, 0.2);
+    --background-input: rgba(255, 255, 255, 1);
+    --color-1: rgba(0, 0, 0, 0.9);
+    --color-2: rgba(255, 255, 255, 0.9);
+    --custom-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    --color-erro: #b91c1c;
+}
+
+:root:has(#checkbox:checked) {
+    --box-shadow-img: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    --color-img: linear-gradient(to bottom, gray 50%, rgba(0, 0, 0, 0.08) 90%);
+    --backgroung-nav: linear-gradient(90deg, rgba(173, 173, 173, 1) 0%, rgba(10, 10, 10, 1) 50%, rgba(177, 177, 177, 1) 100%);
+    --background-footer: linear-gradient(90deg, rgba(34, 34, 34, 1) 0%, rgba(134, 134, 134, 1) 50%, rgba(31, 31, 31, 1) 100%);
+    --background: rgba(0, 0, 0, 0.8);
+    --background-input: #09090b;
+    --color-1: white;
+    --color-2: rgba(0, 0, 0, 0.9);
+    --color-erro: #ff6464;
+    --custom-shadow:
+        rgba(0, 0, 0, 0.2) 0px 1px 3px 0px inset,
+        rgba(0, 0, 0, 0.15) 0px 5px 15px 0px inset,
+        rgba(0, 0, 0, 0.1) 0px 15px 25px 0px inset,
+        rgba(0, 0, 0, 0.08) 0px 30px 40px 0px inset,
+        rgba(0, 0, 0, 0.05) 0px -2px 1px,
+        rgba(0, 0, 0, 0.07) 0px -4px 3px,
+        rgba(0, 0, 0, 0.09) 0px -10px 8px,
+        rgba(0, 0, 0, 0.12) 0px -20px 12px;
+}
+
+
+
+button {
+    display: grid;
+    place-content: center;
+    height: 80px;
+    max-height: 80px;
+    aspect-ratio: 3;
+    border: none;
+    border-radius: 80px;
+    color: var(--color-1);
+    background-color: var(--color-2);
+    font-size: calc(0.6vh + 0.6vw);
+    box-shadow: var(--custom-shadow)
+}
+
+input,
+textarea {
+    background-color: var(--background-input);
+    color: var(--color-1);
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 5px var(--background);
+}
+
+h1 {
+    font-size: calc(2vh + 1.5vw);
+    user-select: none;
+}
+
+#tema {
+    position: absolute;
+    height: 5vh;
+    aspect-ratio: 2/1;
+    top: 1.5vh;
+    right: 3vw;
+}
+
+#tema .label {
+    height: 100%;
+    border-radius: 80px;
+    -webkit-box-shadow: inset 0 0 5px 4px rgba(255, 255, 255, 1),
+        inset 0 0 20px 1px rgba(0, 0, 0, 0.488), 10px 20px 30px rgba(0, 0, 0, 0.096),
+        inset 0 0 0 3px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 5px 4px rgba(255, 255, 255, 1),
+        inset 0 0 20px 1px rgba(0, 0, 0, 0.488), 10px 20px 30px rgba(0, 0, 0, 0.096),
+        inset 0 0 0 3px rgba(0, 0, 0, 0.3);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+}
+
+#tema #checkbox {
+    display: none;
+}
+
+#tema #checkbox:checked~.label::before {
+    left: 5vh;
+    background: url('/public/assets/images/dark.svg') no-repeat center/cover;
+    -webkit-transition: 0.4s;
+    transition: all 0.4s ease-in-out;
+}
+
+#tema #checkbox:checked~.label {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(124, 124, 124, 1) 35%, rgba(255, 255, 255, 1) 100%);
+    border: 1px solid black;
+    -webkit-box-shadow: inset 0 0 5px 4px rgba(255, 255, 255, .01),
+        inset 0 0 20px 1px rgba(0, 0, 0, 0.488), 10px 20px 30px rgba(0, 0, 0, 0.096),
+        inset 0 0 0 3px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 5px 4px rgba(255, 255, 255, .01),
+        inset 0 0 20px 1px rgba(0, 0, 0, 0.488), 10px 20px 30px rgba(0, 0, 0, 0.096),
+        inset 0 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+#tema .label::before {
+    content: "";
+    position: absolute;
+    left: 0.5vw;
+    height: 80%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: url('/public/assets/images/light.svg') no-repeat center/cover;
+    -webkit-transition: 0.4s;
+    transition: all 0.4s ease-in-out;
+}
+
+
+.alert {
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    aspect-ratio: 2/1;
+    line-height: 1.8;
+    padding: 15px;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: 900;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+
+:checked+.alert {
+    display: none;
+}
+
+.alertCheckbox {
+    display: none;
+}
+
+.alertText {
+    margin-top: 5%;
+    font-size: 16px;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.info {
+    background-color: #EEE;
+    border: 1px solid #DDD;
+    color: black;
+}
+
+
+@media (max-width: 768px) {
+    main {
+        position: absolute;
+        height: 100dvh;
+        width: 100lvw;
+    }
+
+    #tema {
+        position: fixed;
+        height: 6vh;
+        aspect-ratio: 1;
+        top: 1.5dvh;
+        right: 3vw;
+    }
+
+    #tema .label::before {
+        left: 0.70vw;
+    }
+
+    #tema #checkbox:checked~.label::before {
+        left: 0.8vw;
+    }
+}

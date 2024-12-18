@@ -1,0 +1,102 @@
+header {
+    position: absolute;
+    bottom: 93lvh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50dvw;
+    height: 5vh;
+    border-radius: 80px;
+    display: flex;
+    z-index: 1;
+    user-select: none;
+    background: var(--backgroung-nav);
+}
+
+header nav {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-size: calc(0.75vh + 1vw);
+}
+
+header nav a {
+    width: 25%;
+    border-radius: 99px;
+    display: grid;
+    place-items: center;
+}
+
+header nav a img {
+    display: none;
+    height: 80%;
+    aspect-ratio: 1;
+}
+
+
+
+header nav a span {
+    content: "";
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    color: rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    transition: all 0.2s ease-in-out;
+}
+
+header nav a:hover,
+.active {
+    color: var(--color-1);
+    box-shadow: 5px 0px 10px 1px inset rgba(255, 255, 255, 1);
+}
+
+header .active span::before,
+nav a:hover span::before,
+header .active span::after,
+nav a:hover span::after {
+    position: absolute;
+    aspect-ratio: 2/1;
+    display: grid;
+    place-items: center;
+    color: var(--color-1);
+}
+
+header .active span::after,
+nav a:hover span::after {
+    content: "/>";
+    right: 10%;
+}
+
+header .active span::before,
+nav a:hover span::before {
+    content: "<";
+    left: 10%;
+}
+
+
+
+@media (max-width: 868px) {
+    header {
+        position: fixed;
+        width: 100dvw;
+        height: 50px;
+        bottom: 0;
+        display: grid;
+        place-items: center;
+        border-radius: 0;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    header nav a span {
+        display: none;
+    }
+
+    header nav a img {
+        display: flex;
+    }
+
+
+}

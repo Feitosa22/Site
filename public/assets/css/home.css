@@ -1,0 +1,162 @@
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    width: 50%;
+    text-align: center;
+    gap: 4%;
+    justify-content: center;
+}
+
+#home h2 {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: calc(1vh + 1.5vw);
+    border-right: 3px solid;
+    overflow: hidden;
+    width: 32ch;
+    white-space: nowrap;
+    font-family: monospace;
+    color: #1d4ed8;
+    animation: typing 10s steps(32) forwards infinite, blink .5s step-end infinite alternate;
+}
+
+#home p {
+    font-size: calc(1vh + 1vw);
+}
+
+.buttons {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.buttons button {
+    background-color: rgba(255, 255, 255, 0.25);
+    position: relative;
+    height: 8vh;
+    max-height: 200px;
+    aspect-ratio: 1;
+    margin: 1%;
+}
+
+.buttons .cv {
+    aspect-ratio: 3.5;
+}
+
+.buttons .cv a {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+.buttons .cv a img {
+    transform: scale(1);
+    order: -1;
+}
+
+.buttons button a {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    color: var(--color-1);
+    min-height: 100%;
+    width: 100%;
+}
+
+.buttons img {
+    transform: scale(2);
+}
+
+#avatar {
+    display: grid;
+    place-items: center;
+    pointer-events: none;
+    margin: 0 auto;
+    transform: rotateZ(-45deg);
+    border-radius: 20%;
+    height: 40vh;
+    aspect-ratio: 1;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 12px 24px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+    overflow: hidden;
+}
+
+#avatar:hover img {
+    transform: scale(1.2);
+}
+
+#avatar img {
+    transform: rotateZ(45deg);
+    height: 100%;
+    aspect-ratio: 1/0.2;
+    background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.08) 90%);
+    mask-image: linear-gradient(to bottom, gray 50%, transparent 85%);
+}
+
+
+
+@media (max-width: 868px) {
+    main {
+        flex-direction: column;
+        height: 80dvh;
+        max-height: 80lvh;
+        width: 100dvw;
+    }
+
+    #home {
+        width: 100%;
+
+    }
+
+    #avatar {
+        margin-bottom: 5%;
+        order: -1;
+    }
+
+    .buttons button,
+    .buttons .cv {
+        aspect-ratio: 1;
+        margin: 3%;
+    }
+
+    .buttons button span {
+        display: none;
+    }
+
+    .buttons img {
+        display: flex;
+    }
+}
+
+
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes typing {
+
+    0%,
+    100% {
+        width: 0;
+    }
+
+    25%,
+    75% {
+        width: 27ch;
+    }
+}

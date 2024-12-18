@@ -1,0 +1,131 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100dvw;
+    height: 6vh;
+    z-index: 1;
+    background: var(--background-footer);
+    border: none;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+footer li,
+footer a {
+    border-radius: 50%;
+    height: 100%;
+    display: grid;
+    transition: all 0.5s;
+    place-items: center;
+}
+
+footer img {
+    height: 3vh;
+    aspect-ratio: 3.5;
+}
+
+footer span {
+    pointer-events: none;
+    opacity: 0;
+    position: absolute;
+    bottom: 100%;
+    transform: translateY(-80%);
+    color: white;
+    padding: 1vh 1vw;
+    border-radius: 10px;
+    font-size: 1vh;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+
+footer span::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-30%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 1vh 0.5vw 0 0.5vw;
+    border-color: var(--after-border-color, #d62976 transparent transparent transparent);
+}
+
+footer a:hover {
+    box-shadow: 10px 80px 60px inset (0, 0, 0, 0.1);
+    box-shadow: 0 8px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    background: linear-gradient(90deg, #181717 0%, rgba(255, 255, 255, 1) 50%, #181717 100%);
+    border-radius: 50%;
+    transition: all .5s;
+    transform: translateY(-30%) scale(1.8);
+}
+
+
+footer a:hover span {
+    opacity: 0.75;
+}
+
+
+@media (max-width: 868px) {
+    footer {
+        position: fixed;
+        width: 50px;
+        right: 2vw;
+        bottom: calc(2vh + 60px);
+        height: 65vh;
+        background: none;
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        overflow: hidden;
+        transition: 1s;
+        animation: scale 1s infinite;
+        z-index: 1;
+    }
+
+    footer:hover {
+        animation: none;
+    }
+
+    footer:hover ul {
+        transform: translateY(0);
+        transition: 1s;
+    }
+
+    footer ul {
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.5);
+        align-items: center;
+        gap: 2vh;
+        transition: 1s;
+    }
+
+    footer a:hover {
+        transform: none;
+        border-radius: 5%;
+    }
+
+    footer span {
+        display: none;
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(0.95);
+    }
+
+    50% {
+        transform: scale(1.0);
+
+    }
+
+    100% {
+        transform: scale(0.95);
+    }
+}
