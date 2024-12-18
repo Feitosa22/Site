@@ -5,7 +5,7 @@ require("dotenv").config();
 const app = express();
 app.use(express.json());
 app.use(cors());
-const port = 3000;
+const port = 8080;
 
 const transporter = nodemailer.createTransport({
   service: "gmail",
@@ -18,6 +18,12 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+app.get("/", (req, res) => {
+  res.json({
+    message: "get tá funcionando!",
+  });
+});
+
 app.post("/enviar-email", (req, res) => {
   const { sendername, replyto, subject, msg } = req.body;
   function temCaracteresEspeciais(valor) {
@@ -28,23 +34,25 @@ app.post("/enviar-email", (req, res) => {
     const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return regex.test(email);
   }
+
   if (
     !sendername ||
     temCaracteresEspeciais(sendername) ||
     !replyto ||
-    validarEmail(replyto) ||
+    !validarEmail(replyto) ||
     !subject ||
     subject.length > 50 ||
     !msg ||
     msg.length > 200
   ) {
-    res.status(422).json({ message: "Erro nos dados!" });
+    res.status(422).json({ message: "Erro nos dados22!" });
     return;
   }
+
   const paramsServer = {
     to: process.env.GMAIL_USER,
     subject: subject,
-    text: `Nome:${sendername}\nEmail:${replyto}\nMensagem:${message}\n`,
+    text: `Nome:${sendername}\nEmail:${replyto}\nMensagem:${msg}\n`,
   };
 
   transporter.sendMail(paramsServer, (error, info) => {

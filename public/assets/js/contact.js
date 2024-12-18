@@ -73,7 +73,7 @@ function validarFormulario() {
 async function enviarFormulario(params) {
   form.style.pointerEvents = "none";
   try {
-    const response = await fetch("http://localhost:3000/enviar-email", {
+    const response = await fetch("http://localhost:8080/enviar-email", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
