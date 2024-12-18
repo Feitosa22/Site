@@ -188,7 +188,7 @@ function startAnimation() {
     }, 1200);
   });
 
-  setTimeout(startAnimation, 12000);
+  setTimeout(startAnimation, 10000);
 }
 
 startAnimation();

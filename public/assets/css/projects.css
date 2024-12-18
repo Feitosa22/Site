@@ -11,6 +11,7 @@ main::before {
 }
 
 #projects {
+    margin-top: 5vh;
     background-color: var(--box-shadow-img);
     border-radius: 8px;
     height: 80vh;
