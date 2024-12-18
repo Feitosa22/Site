@@ -5,21 +5,6 @@ require("dotenv").config();
 const app = express();
 app.use(express.json());
 app.use(cors());
-// const allowedOrigin = 'https://meusite.com'; // Substitua pelo seu domínio
-
-// const corsOptions = {
-//   origin: (origin, callback) => {
-//     if (origin === allowedOrigin || !origin) {
-//       // Permite o acesso se for o domínio permitido ou se for uma requisição sem origem (ex.: backend)
-//       callback(null, true);
-//     } else {
-//       // Bloqueia o acesso para domínios não permitidos
-//       callback(new Error('Not allowed by CORS'));
-//     }
-//   }
-// };
-
-// app.use(cors(corsOptions));
 const port = 3000;
 
 const transporter = nodemailer.createTransport({
