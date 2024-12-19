@@ -1,5 +1,4 @@
-1-arrumar envio de email não está funcionando pois o back está off
-2-arrumar dominio do site
+2-arrumar dominio do site???? verificar dia 19/12
 1515-arrumar responsividade\*-- sobre 1012-add efeito no scroll
 1212-Atualizar Tema ![alt text](image.png)
 1213-Adicionar Mudança de Idioma
