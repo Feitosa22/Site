@@ -2,7 +2,7 @@
 
 ## **Status**: [![Netlify Status](https://api.netlify.com/api/v1/badges/a88bf265-42ef-4af2-8043-b6ede60dac61/deploy-status)](https://app.netlify.com/sites/feitosatecnologia/deploys)
 
-Este é o meu site pessoal, onde compartilho meu **portfólio de projetos**, informações sobre mim e meu **currículo**. O site foi desenvolvido com foco em simplicidade, responsividade e elegância.
+Este é o meu site pessoal, onde compartilho meu **portfólio de projetos**, informações sobre mim e meu **currículo**. O site foi desenvolvido com foco em simplicidade, responsividade e elegância...
 
 ---
 
