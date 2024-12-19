@@ -8,7 +8,7 @@ Este é o meu site pessoal, onde compartilho meu **portfólio de projetos**, inf
 
 ## 🚀 Demonstração
 
-Acesse o site aqui: [https://www.feitosatecnologia.com/](https://www.feitosatecnologia.com/)
+Acesse o site aqui: [https://www.feitosatecnologia.com.br/](https://www.feitosatecnologia.com.br/)
 
 ![Screenshot do site](https://www.feitosatecnologia.com/screenshot.png)
 
